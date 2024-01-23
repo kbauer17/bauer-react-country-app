@@ -16,15 +16,14 @@ class Country extends Component {
     
     render(){
         return (
-            <div>
-                <div className='m-3'>{ this.state.name }</div>
-                <span className='m-3'> Gold medals:  { this.state.gold }
+            <div className='container'>
+                <div className='name py-3'>{ this.state.name }</div>
+                <div className='gold'> Gold medals:  { this.state.gold }
                     <div className='btn-group px-3' role='group'>
                         <button onClick={ this.handleIncrement } className="btn btn-outline-primary btn-sm"> + </button>
                         <button onClick={ this.handleDecrement } className="btn btn-outline-primary btn-sm"> - </button>
                     </div> 
-                    
-                </span>
+                </div>
             </div>
             
         )
