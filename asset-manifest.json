@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bauer-react-country-app/static/css/main.73f1ac84.css",
+    "main.js": "/bauer-react-country-app/static/js/main.30f7649e.js",
+    "static/js/787.70edd029.chunk.js": "/bauer-react-country-app/static/js/787.70edd029.chunk.js",
+    "index.html": "/bauer-react-country-app/index.html",
+    "main.73f1ac84.css.map": "/bauer-react-country-app/static/css/main.73f1ac84.css.map",
+    "main.30f7649e.js.map": "/bauer-react-country-app/static/js/main.30f7649e.js.map",
+    "787.70edd029.chunk.js.map": "/bauer-react-country-app/static/js/787.70edd029.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73f1ac84.css",
+    "static/js/main.30f7649e.js"
+  ]
+}
