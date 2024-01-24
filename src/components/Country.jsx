@@ -12,7 +12,11 @@ class Country extends Component {
     };
 
     handleDecrement = () => {
-        this.setState({ gold: this.state.gold - 1 })
+        if (this.state.gold <= 0){
+            this.setState({gold: 0})
+        } else{
+            this.setState({ gold: this.state.gold - 1 })
+        }
     };
     
     render(){
