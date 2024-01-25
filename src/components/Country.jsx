@@ -3,8 +3,8 @@ import { Button } from '@mui/material'
 
 class Country extends Component {
     state = {
-        name: 'United States',
-        gold: 0,
+        name: this.props.country.name,
+        gold: this.props.country.gold,
     }
 
     handleIncrement = () => {
@@ -21,7 +21,7 @@ class Country extends Component {
     
     render(){
         return (
-            <div className='container'>
+            <div className='container-fluid'>
                 <div className='name py-3'>{ this.state.name }</div>
                 <div className='gold'> Gold medals:  { this.state.gold }
                     <div className='btn-group px-3' role='group'>
