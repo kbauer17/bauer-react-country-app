@@ -35,6 +35,7 @@ handleDecrement = (countryId) => {
   render(){
     return (
       <div className="App">
+        <h2>Olympic Medals</h2>
         { this.state.countriesImmutable.map(country =>
           <Country
             key={country.id}
