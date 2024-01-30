@@ -21,13 +21,25 @@ handleIncrement = (countryId) => {
   this.setState( { countries:countriesMutable } );
 }
 
+handleDecrement = (countryId) => {
+  const countriesMutable = [...this.state.countriesImmutable];
+  const idx = countriesMutable.findIndex( (c) => c.id === countryId);
+  if (countriesMutable[idx].gold <= 0) {
+    countriesMutable[idx].gold = 0;
+  } else {
+    countriesMutable[idx].gold -= 1;
+  }
+  this.setState( { countries:countriesMutable } );
+}
+
   render(){
     return (
       <div className="App">
         { this.state.countriesImmutable.map(country =>
           <Country
             key={country.id}
-            onIncrement = { this.handleIncrement}
+            onIncrement = { this.handleIncrement }
+            onDecrement = { this.handleDecrement }
             country = { country }
           />
         )}
