@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from '@mui/material'
+
 
 class Country extends Component {
   
@@ -10,8 +10,8 @@ class Country extends Component {
                 <div className='name py-3'> { country.name } </div>
                 <div className='gold'> Gold medals:  { country.gold }
                     <div className='btn-group px-3' role='group'>
-                        <Button onClick={ () => onIncrement(country.id) } variant="outlined" size="small"> + </Button>
-                        <Button onClick={ () => onDecrement(country.id) } variant="outlined" size="small"> - </Button>
+                        <button type='button' onClick={ () => onIncrement(country.id) } className='btn btn-primary btn-sm'> + </button>
+                        <button type='button' onClick={ () => onDecrement(country.id) } className='btn btn-primary btn-sm'> - </button>
                     </div> 
                 </div>
             </div>
