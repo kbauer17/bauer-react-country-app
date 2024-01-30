@@ -1,18 +1,20 @@
-import React from "react";
+import React, { Component } from 'react';
 
-function Medal( removeMedal,addMedal,country ) {
-
+class Medal extends Component {
+    render(){
+        const {onDecrement, onIncrement, country, type} = this.props;
     
-        
+            
         return (
-            <div className='gold'> Gold medals:  { country.gold }
+            <div className={type}> {type} medals:  { country[type] }
             <div className='btn-group px-3' role='group'>
-                <button type='button' onClick={ () => addMedal(country.id) } className='btn btn-primary btn-sm'> + </button>
-                <button type='button' onClick={ () => removeMedal(country.id) } className='btn btn-primary btn-sm'> - </button>
+                <button type='button' onClick={ () => onIncrement(country.id) } className='btn btn-primary btn-sm'> + </button>
+                <button type='button' onClick={ () => onDecrement(country.id) } className='btn btn-primary btn-sm'> - </button>
             </div> 
         </div>
         )
     
+    }
 
 }
 

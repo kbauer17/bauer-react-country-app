@@ -6,19 +6,22 @@ class Country extends Component {
   
     render(){
         const {onIncrement, onDecrement, country} = this.props;
+        const medalTypes = [{type: 'gold'}, {type: 'silver'}, {type: 'bronze'}];
+        console.log(medalTypes);
         return (
             <div className='container-fluid'>
                 <div className='name py-3'> { country.name } </div>
-                <div className='gold'> {Medal(onDecrement,onIncrement, country)} </div>
+                {/* <div className='gold'> {Medal(onDecrement,onIncrement, country)} </div> */}
+                {medalTypes.map( (e)=>{
+                    console.log(e.type);
+                    return (
+                        
+                        <Medal onDecrement onIncrement country={country} type={e.type}/>
+                    )
+                } )}
                 
                 
                 
-                {/* <div className='gold'> Gold medals:  { country.gold }
-                    <div className='btn-group px-3' role='group'>
-                        <button type='button' onClick={ () => onIncrement(country.id) } className='btn btn-primary btn-sm'> + </button>
-                        <button type='button' onClick={ () => onDecrement(country.id) } className='btn btn-primary btn-sm'> - </button>
-                    </div> 
-                </div> */}
             </div>
             
         )
