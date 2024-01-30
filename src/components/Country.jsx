@@ -16,7 +16,11 @@ class Country extends Component {
                     console.log(e.type);
                     return (
                         
-                        <Medal onDecrement onIncrement country={country} type={e.type}/>
+                        <Medal 
+                            onDecrement={onDecrement}
+                            onIncrement={onIncrement}
+                            country={country}
+                            type={e.type}/>
                     )
                 } )}
                 
