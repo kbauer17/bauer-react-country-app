@@ -7,10 +7,11 @@ class Country extends Component {
     render(){
         const {onIncrement, onDecrement, country} = this.props;
         const medalTypes = [{type: 'gold'}, {type: 'silver'}, {type: 'bronze'}];
+        const countryTotalMedals = country.gold + country.silver + country.bronze;
         
         return (
             <div className='container-fluid'>
-                <div className='name py-3'> { country.name } </div>
+                <div className='name py-3'> { country.name }:  {countryTotalMedals}</div>
                    {medalTypes.map( (e)=>{
                         return (
                             <Medal 
