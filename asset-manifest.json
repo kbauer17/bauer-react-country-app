@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bauer-react-country-app/static/css/main.60ca3fd3.css",
-    "main.js": "/bauer-react-country-app/static/js/main.7d1d4aa2.js",
+    "main.css": "/bauer-react-country-app/static/css/main.acf0c1e4.css",
+    "main.js": "/bauer-react-country-app/static/js/main.62000c26.js",
     "static/js/787.70edd029.chunk.js": "/bauer-react-country-app/static/js/787.70edd029.chunk.js",
     "index.html": "/bauer-react-country-app/index.html",
-    "main.60ca3fd3.css.map": "/bauer-react-country-app/static/css/main.60ca3fd3.css.map",
-    "main.7d1d4aa2.js.map": "/bauer-react-country-app/static/js/main.7d1d4aa2.js.map",
+    "main.acf0c1e4.css.map": "/bauer-react-country-app/static/css/main.acf0c1e4.css.map",
+    "main.62000c26.js.map": "/bauer-react-country-app/static/js/main.62000c26.js.map",
     "787.70edd029.chunk.js.map": "/bauer-react-country-app/static/js/787.70edd029.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60ca3fd3.css",
-    "static/js/main.7d1d4aa2.js"
+    "static/css/main.acf0c1e4.css",
+    "static/js/main.62000c26.js"
   ]
 }
