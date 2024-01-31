@@ -32,10 +32,17 @@ handleDecrement = (countryId, type) => {
   this.setState( { countries:countriesMutable } );
 }
 
+getTotalMedalCount = () => {
+  const golds = this.state.countriesImmutable.reduce( (a,b) => a + b.gold, 0);
+  const silvers = this.state.countriesImmutable.reduce( (a,b) => a + b.silver, 0);
+  const bronzes = this.state.countriesImmutable.reduce( (a,b) => a + b.bronze, 0);
+  return golds + silvers + bronzes;
+}
+
   render(){
     return (
       <div className="App">
-        <h2>Olympic Medals</h2>
+        <h2 className='App-header py-3'>Olympic Medals:  {this.getTotalMedalCount()}</h2>
         { this.state.countriesImmutable.map(country =>
           <Country
             key={country.id}
