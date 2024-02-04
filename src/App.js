@@ -52,7 +52,7 @@ addCountry = (name) => {
   const id = countriesImmutable.length === 0 ? 1 : Math.max(...countriesImmutable.map(name => name.id)) +1;
 
   // add the new country to a mutable array
-  const countriesMutable = countriesImmutable.concat( { id: id, name: name});
+  const countriesMutable = countriesImmutable.concat( { id: id, name: name,gold: 0, silver: 0, bronze: 0});
 
   // change state by setting the state immutable array equal to the mutable array
   this.setState( {countriesImmutable:countriesMutable} );
