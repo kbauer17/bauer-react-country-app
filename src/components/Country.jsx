@@ -5,7 +5,7 @@ import Medal from './Medal';
 class Country extends Component {
   
     render(){
-        const {onIncrement, onDecrement, country} = this.props;
+        const {onIncrement, onDecrement, country, deleteCountry} = this.props;
         const medalTypes = [{type: 'gold'}, {type: 'silver'}, {type: 'bronze'}];
         const countryTotalMedals = country.gold + country.silver + country.bronze;
         
@@ -21,6 +21,9 @@ class Country extends Component {
                                 type={e.type}/>
                         )
                     } )}
+                    <div className='py-2'>
+                        <button type='button' onClick={ () => deleteCountry(country.id) } className='btn btn-primary btn-sm'> Delete Country </button>
+                    </div>
             </div>
         )
     }

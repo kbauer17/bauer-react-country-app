@@ -39,6 +39,11 @@ getTotalMedalCount = () => {
   return golds + silvers + bronzes;
 }
 
+removeCountry = (countryId) => {
+  const countries = this.state.countriesImmutable.filter(c => c.id !==countryId);
+  this.setState( { countriesImmutable:countries});
+}
+
   render(){
     return (
       <div className="App">
@@ -48,6 +53,7 @@ getTotalMedalCount = () => {
             key={country.id}
             onIncrement = { this.handleIncrement }
             onDecrement = { this.handleDecrement }
+            deleteCountry = {this.removeCountry}
             country = { country }
           />
         )}
