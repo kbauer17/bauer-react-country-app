@@ -4,6 +4,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Country from './components/Country';
+import NewCountry from './components/NewCountry';
 
 class App extends Component {
   state = {
@@ -45,7 +46,7 @@ removeCountry = (countryId) => {
 }
 
 addCountry = (name) => {
-  const { name } = this.state;
+  const { countriesImmutable } = this.state;
 
   //set an id for the new country
   const id = countriesImmutable.length === 0 ? 1 : Math.max(...countriesImmutable.map(name => name.id)) +1;
