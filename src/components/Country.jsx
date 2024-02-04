@@ -11,7 +11,7 @@ class Country extends Component {
         
         return (
             <div className='container-fluid'>
-                <div className='name py-3'> { country.name }:  {countryTotalMedals}</div>
+                <div className='name py-1'> { country.name }:  {countryTotalMedals}</div>
                    {medalTypes.map( (e)=>{
                         return (
                             <Medal 
@@ -21,7 +21,7 @@ class Country extends Component {
                                 type={e.type}/>
                         )
                     } )}
-                    <div className='py-2'>
+                    <div className='py-1'>
                         <button type='button' onClick={ () => deleteCountry(country.id) } className='btn btn-primary btn-sm'> Delete Country </button>
                     </div>
             </div>

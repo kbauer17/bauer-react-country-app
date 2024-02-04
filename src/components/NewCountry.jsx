@@ -26,7 +26,7 @@ class NewCountry extends Component{
         const { showForm, name } = this.state;
 
         return (
-            <div>
+            <div className="New-country">
             {
                 ( showForm ) ?
                 <form>
@@ -51,7 +51,7 @@ class NewCountry extends Component{
                         >Cancel</button>
                 </form>
                 :
-                <span className="Toggle-form" onClick={this.toggleForm}
+                <span className="Toggle-form btn btn-primary my-1" onClick={this.toggleForm}
                 >Add a Country</span>
             }
             </div>
