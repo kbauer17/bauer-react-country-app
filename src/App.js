@@ -44,6 +44,20 @@ removeCountry = (countryId) => {
   this.setState( { countriesImmutable:countries});
 }
 
+addCountry = (name) => {
+  const { name } = this.state;
+
+  //set an id for the new country
+  const id = countriesImmutable.length === 0 ? 1 : Math.max(...countriesImmutable.map(name => name.id)) +1;
+
+  // add the new country to a mutable array
+  const countriesMutable = countriesImmutable.concat( { id: id, name: name});
+
+  // change state by setting the state immutable array equal to the mutable array
+  this.setState( {countriesImmutable:countriesMutable} );
+
+}
+
   render(){
     return (
       <div className="App">
@@ -57,6 +71,7 @@ removeCountry = (countryId) => {
             country = { country }
           />
         )}
+        <NewCountry onAdd={ this.addCountry }/>
       </div>
     );
   }
