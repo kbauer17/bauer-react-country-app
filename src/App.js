@@ -4,7 +4,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Country from './components/Country';
-import NewCountry from './components/NewCountry';
+// import NewCountry from './components/NewCountry';
 import NewCountryModal from './components/NewCountryModal';
 
 class App extends Component {

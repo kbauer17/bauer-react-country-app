@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-function Example() {
+function AddCountry(props) {
+    const [name, setName] = useState('');
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -10,9 +10,11 @@ function Example() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch static backdrop modal
-      </Button>
+      <button 
+        className='btn btn-primary my-2'
+        onClick={handleShow}>
+        Add Country
+      </button>
 
       <Modal
         show={show}
@@ -21,21 +23,47 @@ function Example() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Add Country</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          I will not close if you click outside me. Do not even try to press
-          escape key.
+          <form
+            onSubmit={ (e) => {
+                e.preventDefault();
+                setName('');
+                props.onAdd(name);
+            } }
+            id='addmodal'
+            // className=''
+            >
+                <div>
+                    <div>
+                        <label for='name'>Country Name</label>
+                    </div>
+                    <div>
+                        <input 
+                            className=''
+                            id='name'
+                            placeholder='United States'
+                            type='text'
+                            value={name}
+                            onChange={ (e) => { setName(e.target.value); }}
+                            />
+                    </div>
+                </div>
+            </form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <button onClick={handleClose} className='btn btn-secondary'>
             Close
-          </Button>
-          <Button variant="primary">Understood</Button>
+          </button>
+          <button className='btn btn-primary'
+            onClick={handleClose}
+            form='addmodal'
+            >Add Country</button>
         </Modal.Footer>
       </Modal>
     </>
   );
 }
 
-export default Example;
+export default AddCountry;
