@@ -5,6 +5,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Country from './components/Country';
 import NewCountry from './components/NewCountry';
+import NewCountryModal from './components/NewCountryModal';
 
 class App extends Component {
   state = {
@@ -72,7 +73,8 @@ addCountry = (name) => {
             country = { country }
           />
         )}
-        <NewCountry onAdd={ this.addCountry }/>
+        {/* <NewCountry onAdd={ this.addCountry }/> */}
+        <NewCountryModal onAdd={this.addCountry}/>
       </div>
     );
   }
